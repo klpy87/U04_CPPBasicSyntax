@@ -20,4 +20,40 @@ protected:
 public:	
 	virtual void Tick(float DeltaTime) override;
 
+private:
+	UPROPERTY(EditAnywhere)
+		int Alpha = 10;
+
+	UPROPERTY(EditInstanceOnly) 
+		int Bravo = 20;
+
+	UPROPERTY(EditDefaultsOnly) //블프안에서만보임
+		int Chalie;
+
+	UPROPERTY(VisibleAnywhere)
+		int Delta = 40;
+
+	
+
+	UPROPERTY(EditDefaultsOnly, Category = "Visible")
+		bool bVisble;
+
+protected:
+
+	UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+		int Echo = 50;
+
+	UPROPERTY(BlueprintReadWrite, VisibleDefaultsOnly)
+		int Foxtrot = 60;
+
+	UPROPERTY(VisibleDefaultsOnly)
+		class UTextRenderComponent* Text;
+
+private:
+	int Golf = 70;
+
+
+
+
+
 };
